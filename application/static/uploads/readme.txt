@@ -1,0 +1,1 @@
+This folder will hold the images uploaded to the server by user.

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>food analyzer</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    {% if not filename %}
+    <h2 style="text-align: center">food analyzer</h4>
+    <h4 style="text-align: center">by henry bobeck, sam stazinski, devarshi bhadouria, & zane snider</h4>
+    {% endif %}
+
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+        <div>
+            <p style="text-align: center">This photo looks like <b>{{ prediction }}</b>!</p>
+            {% if expiration %}
+            <p style="text-align: center">{{ expiration }}</p>
+            {% endif %}
+            {% if nutritional %}
+            <p style="text-align: center"><b>{{ prediction }}</b> has {{ nutritional['kcal'] }} kcal, {{ nutritional['fat'] }} fat, & {{ nutritional['protein'] }} protein. </p>
+            {% endif %}
+            {% if general %}
+            <p style="text-align: center">{{ general }}</p>
+            {% endif %}
+
+        </div>
+    {% else %}
+    <form method="post" action="/" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+    {% endif %}
+    
+</div>
+{% endblock %}
