@@ -1,4 +1,2 @@
 # food-analyzer
-Identifies food in an image, displays estimated expiration date and nutritional info
-
-authors: Henry Bobeck, Sam Stazinski, Zane Snider, Devarshi Bhadouria
+Identifies food in an image, displays estimated expiration date, nutritional info, and general description
