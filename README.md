@@ -5,4 +5,4 @@ Identifies food in an image, displays estimated expiration date, nutritional inf
 
 ![Results Page (ripe banana input image)](report/images/UI-EXAMPLE.png?raw=true "Results Page")
 
-**For more information, see [Final_Report.pdf](report/Final_Report.pdf)**
+**For more information, see [paper.pdf](report/paper.pdf)**
