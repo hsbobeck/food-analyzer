@@ -7,10 +7,10 @@ Identifies food in an image, displays estimated expiration date, nutritional inf
 
 TO RUN: 
 
-To run our final user interface, one must install the necessary Python packages and then run the python file food-analyzer/application/main.py. 
+To run the user interface, run the python file food-analyzer/application/main.py. 
 
 NECESSARY PREREQUISITE:
 
-In order for our final user interface to function, ensure first that the trained models are in the /models/ directory. If they are missing, they were likely too large to upload to the given hosting service and must be re-created using the .ipynb notebook files used for training in the /notebooks/ directory.
+In order for our user interface to function, ensure first that the trained models are in the /models/ directory. If they are missing, they were likely too large to upload to the given hosting service and must be re-created using the .ipynb notebook files used for training in the /notebooks/ directory.
 
 **For more information, see [paper.pdf](report/paper.pdf)**
